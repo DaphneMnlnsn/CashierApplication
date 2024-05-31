@@ -16,7 +16,8 @@ namespace ItemNamespace
         public DiscountedItem(string name, double price, int quantity, double discount): base(name, price, quantity)
         {
             this.item_discount = discount * 0.01;
-            this.discounted_price = price - (item_discount * item_price);
+            double result = item_discount * item_price;
+            this.discounted_price = price - result;
         }
 
         public override double getTotalPrice()
