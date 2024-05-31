@@ -32,5 +32,17 @@ namespace CashierApplication
             di.setPayment(Convert.ToDouble(paymentTxtBox.Text));
             changeLbl.Text = di.getChange().ToString();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoginAccount login = new frmLoginAccount();
+            login.Show();
+            this.Hide();
+        }
+
+        private void exitApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
